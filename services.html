@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Web design | Services</title>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Maha</span> Web design</h1>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html" class="current">Services</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="newsletter">
+        <div class="container">
+            <h1>Subscribe to our newsletter</h1>
+            <form>
+                <input type="email" placeholder="Enter Email . . .">
+                <button type="submit" class="button_1">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="main">
+        <div class="container">
+            <article id="main-col">
+                <h1 class="page-title">Services</h1>
+                <ul id="services">
+                    <li>
+                        <h3>Website design</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, numquam.</p>
+                        <p>pricing: $1,000 - $3,000</p>
+                    </li>
+
+                    <li>
+                        <h3>Website maintenance</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, numquam.</p>
+                        <p>pricing: $250 per month</p>
+                    </li>
+
+                    <li>
+                        <h3>Website hosting</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, numquam.</p>
+                        <p>pricing: $25 per month</p>
+                    </li>
+                </ul>
+            </article>
+
+            <aside id="sidebar">
+                <div class="dark">
+                    <h3>Get a Quote</h3>
+
+                    <form class="quote">
+                        <div>
+                            <label for="name">Name</label><br>
+                            <input type="text" placeholder="Name ... ">
+                        </div>
+                        <div>
+                            <label for="email">Email</label><br>
+                            <input type="text" placeholder="Email ...">
+                        </div>
+                        <div>
+                            <label for="message">Message</label><br>
+                            <textarea name="message" placeholder="Message"></textarea>
+                        </div>
+                        <button type="submit" class="button_1">Send</button>
+                    </form>
+
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    
+    <button Id="to-top">
+        <span class="material-icons">arrow_upward</span>
+    </button>
+
+    <footer>
+        <p>Website With A Responsive Layout, &copy; 2022</p>
+    </footer>
+
+
+    <script>
+        const toTop = document.querySelector("#to-top");
+        
+        toTop.addEventListener("click", function(){
+            // window.scrollTo(0,0);
+
+            window.scrollTo({
+                top: 0, left: 0,
+                behavior: "smooth"
+            });
+
+            // $("html, body").animate({ scrollTo: 0 }, "slow");
+        });
+
+        window.addEventListener("scroll", ()=>{
+            if(window.pageYOffset > 100){
+                toTop.classList.add("active");
+            } else {
+                toTop.classList.remove("active");
+            }
+        })
+
+
+    </script>
+
+
+</body>
+</html>

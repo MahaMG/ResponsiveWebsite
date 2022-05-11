@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Web design | Home</title>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Maha</span> Web design</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="current">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <h1>Affordable professional websites</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ut alias ipsam iste dolore, deleniti dolor distinctio quasi dicta repellat.</p>
+        </div>
+    </section>
+    
+    <section id="newsletter">
+        <div class="container">
+            <h1>Subscribe to our newsletter</h1>
+            <form>
+                <input type="email" placeholder="Enter Email . . .">
+                <button type="submit" class="button_1">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="boxes">
+        <div class="container">
+            <div class="box">
+                <img src="./img/html-logo.png" alt="HTML5 logo">
+                <h3>HTML5 Markup</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, enim!</p>
+            </div>
+
+            <div class="box">
+                <img src="./img/css-logo.png" alt="CSS3 logo">
+                <h3>CSS3 styling</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, enim!</p>
+            </div>
+
+            <div class="box">
+                <img src="./img/graphic-design.png" alt="Graphic logo">
+                <h3>Graphic design</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, enim!</p>
+            </div>
+        </div>
+    </section>
+
+
+    <button Id="to-top">
+        <span class="material-icons">arrow_upward</span>
+    </button>
+
+    <footer>
+        <p>Website With A Responsive Layout, &copy; 2022</p>
+    </footer>
+
+
+    <script>
+        const toTop = document.querySelector("#to-top");
+        
+        toTop.addEventListener("click", function(){
+            // window.scrollTo(0,0);
+
+            window.scrollTo({
+                top: 0, left: 0,
+                behavior: "smooth"
+            });
+
+            // $("html, body").animate({ scrollTo: 0 }, "slow");
+        });
+
+        window.addEventListener("scroll", ()=>{
+            if(window.pageYOffset > 100){
+                toTop.classList.add("active");
+            } else {
+                toTop.classList.remove("active");
+            }
+        })
+
+
+    </script>
+</body>
+</html>
